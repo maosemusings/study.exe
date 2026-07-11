@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>study.exe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loading-screen">
+  <h1>study.exe</h1>
+  <p>booting operating system...</p>
+</div>
+
+<div id="dream-bg">
+  <div class="stars"></div>
+  <div class="scanlines"></div>
+  <div class="glitch"></div>
+</div>
+
+<div id="desktop">
+
+<div class="desktop-icon">📚<span>study</span></div>
+<div class="desktop-icon">🛒<span>shop</span></div>
+<div class="desktop-icon">🎵<span>music</span></div>
+<div class="desktop-icon">🏆<span>achievements</span></div>
+
+<div class="window" id="pomodoro-window">
+<div class="titlebar">
+<span>study.exe</span>
+<div class="buttons"><span>_</span><span>□</span><span>×</span></div>
+</div>
+
+<div class="window-content">
+<h2>pomodoro</h2>
+
+<div id="timer">25:00</div>
+
+<div id="credits">
+Credits: <span id="creditCount">0</span>
+</div>
+
+<div id="level">
+Level <span id="levelCount">1</span>
+</div>
+
+<div class="controls">
+<button id="startBtn">START</button>
+<button id="pauseBtn">PAUSE</button>
+<button id="resetBtn">RESET</button>
+</div>
+
+<div class="quote">
+don't flop.
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div id="taskbar">
+<div id="start-button">START</div>
+<div id="taskbar-clock">00:00</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
