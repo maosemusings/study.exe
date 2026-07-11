@@ -1,0 +1,154 @@
+
+:root{
+--brat:#8ace00;
+--bg:#050505;
+--panel:#111;
+--text:#eaffcf;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+overflow:hidden;
+background:#000;
+color:var(--text);
+font-family:"IBM Plex Mono",monospace;
+height:100vh;
+}
+#loading-screen{
+position:fixed;inset:0;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+background:#000;z-index:9999;
+animation:fadeout 2s 1.5s forwards;
+}
+@keyframes fadeout{to{opacity:0;visibility:hidden}}
+#dream-bg{
+position:fixed;inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(138,206,0,.15),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(255,0,170,.08),transparent 25%),
+linear-gradient(#040404,#000);
+}
+.stars::before{
+content:"✦ ✧ ✦ ✧ ✦ ✧ ✦";
+position:absolute;
+top:10%;left:8%;
+font-size:2rem;
+opacity:.25;
+animation:float 8s ease-in-out infinite;
+}
+.scanlines{
+position:absolute;inset:0;
+background:repeating-linear-gradient(
+to bottom,
+transparent 0 3px,
+rgba(255,255,255,.03) 4px);
+pointer-events:none;
+}
+.glitch{
+position:absolute;inset:0;
+background:linear-gradient(transparent 48%,rgba(138,206,0,.06) 50%,transparent 52%);
+animation:flicker .18s infinite alternate;
+mix-blend-mode:screen;
+}
+@keyframes flicker{from{opacity:.2}to{opacity:.5}}
+@keyframes float{
+50%{transform:translateY(-15px)}
+}
+#desktop{
+position:relative;
+height:calc(100vh - 40px);
+padding:24px;
+}
+.desktop-icon{
+width:78px;
+text-align:center;
+margin-bottom:20px;
+color:white;
+cursor:pointer;
+}
+.desktop-icon span{
+display:block;
+margin-top:6px;
+font-size:.8rem;
+}
+.window{
+position:absolute;
+top:70px;
+left:170px;
+width:520px;
+background:rgba(20,20,20,.9);
+border:2px solid var(--brat);
+box-shadow:0 0 25px rgba(138,206,0,.35);
+backdrop-filter:blur(8px);
+}
+.titlebar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:8px 12px;
+background:var(--brat);
+color:#000;
+font-weight:bold;
+font-family:"Press Start 2P",cursive;
+font-size:.6rem;
+}
+.buttons span{
+margin-left:8px;
+cursor:pointer;
+}
+.window-content{
+padding:24px;
+}
+#timer{
+font-size:4rem;
+font-family:"Press Start 2P",cursive;
+text-align:center;
+margin:20px 0;
+color:var(--brat);
+text-shadow:0 0 10px var(--brat);
+}
+#credits,#level{
+margin:8px 0;
+}
+.controls{
+display:flex;
+gap:10px;
+justify-content:center;
+margin:20px 0;
+}
+button{
+background:var(--brat);
+color:#000;
+border:none;
+padding:10px 18px;
+font-weight:bold;
+cursor:pointer;
+transition:.2s;
+}
+button:hover{
+transform:scale(1.05);
+filter:brightness(1.15);
+}
+.quote{
+text-align:center;
+opacity:.7;
+font-style:italic;
+}
+#taskbar{
+position:fixed;
+bottom:0;left:0;right:0;
+height:40px;
+background:#111;
+border-top:2px solid var(--brat);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 10px;
+}
+#start-button{
+background:var(--brat);
+color:#000;
+padding:6px 12px;
+font-weight:bold;
+}
